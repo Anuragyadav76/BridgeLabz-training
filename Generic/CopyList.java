@@ -1,0 +1,12 @@
+import java.util.*;
+class CopyList {
+    public static void copyList(List<? super Number> dest, List<? extends Number> src) {
+        dest.addAll(src);
+    }
+    public static void main(String[] args) {
+        List<Number> numbers = new ArrayList<>();
+        List<Integer> ints = Arrays.asList(1, 2, 3);
+        copyList(numbers, ints);
+        System.out.println(numbers);
+    }
+}
